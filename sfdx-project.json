@@ -2,11 +2,19 @@
   "packageDirectories": [
     {
       "path": "force-app",
-      "default": true
+      "default": true,
+      "package": "rH DevOps",
+      "versionName": "ver 0.1",
+      "versionNumber": "0.1.0.NEXT",
+      "versionDescription": "rH DevOps package"
     }
   ],
   "name": "dx-empty",
-  "namespace": "",
+  "namespace": "rHDevOps",
   "sfdcLoginUrl": "https://login.salesforce.com",
-  "sourceApiVersion": "55.0"
+  "sourceApiVersion": "55.0",
+  "packageAliases": {
+    "rH DevOps": "0Ho3t000000k9pSCAQ",
+    "rH DevOps@1.0.0": "04t3t000000jfDpAAI"
+  }
 }
