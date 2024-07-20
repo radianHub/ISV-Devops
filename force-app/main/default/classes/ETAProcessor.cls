@@ -12,10 +12,10 @@ public with sharing class ETAProcessor {
 			System.debug('etaElement ' + etaElement.Name);
 			System.debug('etaElement processor ' + etaElement.rHDevOps__Processor__c);
 
-			ETA_Element elementProcessor;
+			iETAElement elementProcessor;
 			String elementProcessorName = etaElement.rHDevOps__Processor__c;
 			Type t = Type.forName(elementProcessorName);
-			elementProcessor = (ETA_Element) t.newInstance();
+			elementProcessor = (iETAElement) t.newInstance();
 
 			elementProcessor.process(etaElement);
 		}
