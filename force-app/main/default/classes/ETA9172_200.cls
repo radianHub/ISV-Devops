@@ -1,4 +1,7 @@
 public with sharing class ETA9172_200 implements ETA_Element {
+	public void process() {
+	}
+
 	public void process(rHDevOps__ETA_Element__c etaElement) {
 		System.debug('ETA 9172 200 package processing here');
 
