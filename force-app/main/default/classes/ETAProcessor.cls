@@ -17,7 +17,7 @@ public with sharing class ETAProcessor {
 			Type t = Type.forName(elementProcessorName);
 			elementProcessor = (ETA_Element) t.newInstance();
 
-			elementProcessor.process();
+			elementProcessor.process(etaElement);
 		}
 	}
 }
