@@ -9,3 +9,6 @@ sf org create scratch -f ./config/project-scratch-def.json -a "$scratchOrgName" 
 ## DEPLOY FORCEAPP
 # sf project deploy start -d [PATH] -o [TARGET ORG]
 sf project deploy start -d force-app -o "$scratchOrgName"
+
+## OPEN NEW ORG
+sf org open
