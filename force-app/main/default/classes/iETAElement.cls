@@ -1,5 +1,3 @@
-global interface ETA_Element {
-	void process();
-
+global interface iETAElement {
 	void process(rHDevOps__ETA_Element__c etaElement);
 }
