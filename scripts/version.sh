@@ -1,1 +1,1 @@
-sf package version create -p 0HoVT00000000OD0AY -c -d force-app -n $1 -w 30 -x --json
+sf package version create -p 0HoVT00000000Pp0AI -c -d force-app -n $1 -w 30 -x --json
