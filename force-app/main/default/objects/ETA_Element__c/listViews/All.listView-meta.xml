@@ -3,6 +3,7 @@
     <fullName>All</fullName>
     <columns>NAME</columns>
     <columns>Namespace__c</columns>
+    <columns>Processor_Override__c</columns>
     <columns>Processor__c</columns>
     <filterScope>Everything</filterScope>
     <label>All</label>

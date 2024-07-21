@@ -4,7 +4,7 @@ public with sharing class ETAProcessor {
 
 	public void process() {
 		List<rHDevOps__ETA_Element__c> etaElements = [
-			SELECT Id, Name, rHDevOps__Processor__c, rHDevOps__Namespace__c
+			SELECT Id, Name, rHDevOps__Processor__c, rHDevOps__Namespace__c, rHDevOps__Processor_Override__c
 			FROM rHDevOps__ETA_Element__c
 		];
 
@@ -15,9 +15,11 @@ public with sharing class ETAProcessor {
 			iETAElement elementProcessor;
 			String elementProcessorName = etaElement.rHDevOps__Processor__c;
 
-			String namespace = etaElement.rHDevOps__Namespace__c != null
-				? etaElement.rHDevOps__Namespace__c
-				: 'rHDevOps';
+			String namespace = 'rHDevOps';
+			if (etaElement.rHDevOps__Processor_Override__c != null) {
+				namespace = etaElement.rHDevOps__Namespace__c != null ? etaElement.rHDevOps__Namespace__c : '';
+			}
+
 			Type t = Type.forName(namespace, elementProcessorName);
 			elementProcessor = (iETAElement) t.newInstance();
 
